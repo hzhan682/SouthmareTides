@@ -147,7 +147,9 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         direction.y = 0;
         direction = direction.normalized * directionLength;
 
-        if (direction != Vector3.zero)
+        // Freeze pos when attacking
+
+        if (m_animator.GetCurrentAnimatorStateInfo(0).IsName("Movement") && direction != Vector3.zero)
         {
             m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
 
@@ -157,6 +159,8 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         }
 
         JumpingAndLanding();
+
+
     }
 
     private void JumpingAndLanding()

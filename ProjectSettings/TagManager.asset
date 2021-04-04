@@ -12,11 +12,8 @@ TagManager:
   - PauseScreen
   - Treasure
   - ReturnHome
-  - HomeIsland
-  - WeaponIsland
-  - ArmourIsland
-  - BritishTreasureIsland
-  - UpgradeShipIsland
+  - Weapon
+  - HealthBar
   layers:
   - Default
   - TransparentFX
@@ -27,9 +24,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Ground
-  - 
-  - 
+  - GroundLayerMask
+  - PlayerLayerMask
+  - EnemyLayerMask
   - 
   - 
   - 
